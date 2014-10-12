@@ -21,12 +21,12 @@ void loop() {
   delay(1000);        // delay in between reads for stability
 
   if (sensorValue < 300) // Soil is dry
-  {                                  // in steps of 1 degree
+  {                                  
     pos = 180;
     myservo.write(pos);              // tell servo to go to position 180
     delay(150);                       // waits 150ms for the servo to reach the position
   }
-  else if (sensorValue >= 300 && sensorValue < 600)  // Soil is moist
+  else if (sensorValue >= 300 && sensorValue < 600)  // Soil is slightly moist
   {
     pos = 90;
     myservo.write(pos);              // tell servo to go to position 90
